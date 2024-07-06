@@ -1,7 +1,16 @@
-export default function TodoInput(){
+import { useState } from "react"
+
+export default function TodoInput(props){
+    const { handleAddTodos, todoVaue, setTodoValue } = props
     return (
-        <div>
-            TodoInput
-        </div>
+        <header>
+            <input value={todoVaue} onChange={(e) => {
+                setTodoValue(e.target.value)
+            }} placeholder="Enter todo..." />
+            <button onClick={() => {
+                handleAddTodos(todoVaue)
+                setTodoValue('')
+            }}>Add</button>
+        </header>
     )
 }
