@@ -7,7 +7,7 @@ export default function TodoInput(props){
             <input className="input is-primary is-large mr-3 column is-four-fifths is-flex-grow-5" value={todoVaue} onChange={(e) => {
                 setTodoValue(e.target.value)
             }} placeholder="Enter todo..." />
-            <button className="button is-primary is-large column" onClick={() => {
+            <button className="button is-primary is-large column is-flex-shrink-5 has-text-weight-bold" onClick={() => {
                 handleAddTodos(todoVaue)
                 setTodoValue('')
             }}>Add</button>
